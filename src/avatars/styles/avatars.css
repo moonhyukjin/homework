@@ -55,11 +55,11 @@ body {
       height: 18px;
       border: 1px solid #fff;
       border-radius: 50%;
-      background-color: #bcc3c7;
+      background-color: #dbdbdb;
       box-sizing: border-box;
 
       &[aria-label='온라인'] {
-        background-color: #03cc5c;
+        background-color: #4cfe88;
       }
     }
   }
