@@ -1,0 +1,8 @@
+.wig {
+  border: 1px solid #ebebea;
+  box-shadow: 0px 4px 4px rgba(181, 181, 181, 0.15);
+  border-radius: 6px;
+}
+.weather-widget {
+  background: linear-gradient(99.49deg, #ffffff 29.16%, #f4f4f4 93.35%);
+}

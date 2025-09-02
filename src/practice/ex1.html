@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example</title>
+    <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+    <link rel="stylesheet" href="./css/ex1.css" />
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const avatars = document.querySelectorAll('.avatar-item');
+        let z = 100;
+        console.log(avatars.length);
+
+        avatars.forEach((avatar) => {
+          avatar.style.zIndex = z;
+          z--;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section class="avatar-area">
+      <h1 class="sr-only">친구 목록</h1>
+      <ul class="avatar-list">
+        <li class="avatar-item is-online">
+          <a href="#" class="avatar-link" aria-describedby="tooltip-1">
+            <picture class="avatar">
+              <img src="./images/ex1/1.jpeg" alt="민지" />
+            </picture>
+            <span class="sr-only">온라인</span>
+          </a>
+          <div id="tooltip-1" role="tooltip" class="tooltip">
+            <span class="name">민지</span>
+            <span class="connection">접속중</span>
+          </div>
+        </li>
+        <li class="avatar-item is-online">
+          <a href="#" class="avatar-link" aria-describedby="tooltip-2">
+            <picture class="avatar">
+              <img src="./images/ex1/2.jpeg" alt="하니" />
+            </picture>
+            <span class="sr-only">온라인</span>
+          </a>
+          <div id="tooltip-2" role="tooltip" class="tooltip">
+            <span class="name">하니</span>
+            <span class="connection">접속중</span>
+          </div>
+        </li>
+        <li class="avatar-item is-offline">
+          <a href="#" class="avatar-link" aria-describedby="tooltip-3">
+            <picture class="avatar">
+              <img src="./images/ex1/3.jpeg" alt="다니엘" />
+            </picture>
+            <span class="sr-only">오프라인</span>
+          </a>
+          <div id="tooltip-3" role="tooltip" class="tooltip">
+            <span class="name">다니엘</span>
+            <span class="connection">오프라인</span>
+          </div>
+        </li>
+        <li class="avatar-item is-offline">
+          <a href="#" class="avatar-link" aria-describedby="tooltip-4">
+            <picture class="avatar">
+              <img src="./images/ex1/4.jpeg" alt="해린" />
+            </picture>
+            <span class="sr-only">오프라인</span>
+          </a>
+          <div id="tooltip-4" role="tooltip" class="tooltip">
+            <span class="name">해린</span>
+            <span class="connection">오프라인</span>
+          </div>
+        </li>
+        <li class="avatar-item is-offline">
+          <a href="#" class="avatar-link" aria-describedby="tooltip-5">
+            <picture class="avatar">
+              <img src="./images/ex1/5.jpeg" alt="혜린" />
+            </picture>
+            <span class="sr-only">오프라인</span>
+          </a>
+          <div id="tooltip-5" role="tooltip" class="tooltip">
+            <span class="name">혜린</span>
+            <span class="connection">오프라인</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

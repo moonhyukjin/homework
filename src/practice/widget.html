@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example</title>
+  </head>
+  <body>
+    <h1>레이아웃 연습</h1>
+    <section class="widget-area">
+      <h2 class="sr-only">위젯 정보</h2>
+      <div class="weather-widget widget">
+        <h3 class="sr-only">날씨 현황</h3>
+        <div class="desc-box">
+          <span class="txt" aria-label="현재 온도 영하 0.9도">-0.9°</span>
+          <p class="desc" aria-label="어제보다 1.3도 낮아요">어제보다 1.3° 낮아요</p>
+        </div>
+        <img src="./images/widget/partly cloudy.svg" alt="흐림" />
+      </div>
+      <div class="fine-dust-widget widget">
+        <h3 class="sr-only">미세먼지 농도</h3>
+        <div class="desc-box">
+          <span class="txt">13 좋음</span>
+          <p class="desc">미세먼지</p>
+        </div>
+        <img src="./images/widget/FineDust.svg" alt="" />
+      </div>
+      <div class="kosdaq-widget widget">
+        <h3 class="sr-only">코스닥</h3>
+        <div class="desc-box">
+          <span class="txt">859.65</span>
+          <p class="desc">코스닥</p>
+        </div>
+        <img src="./images/widget/FineDust.svg" alt="" />
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+.sr-only {
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.avatar-link {
+  --size: 40px;
+
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  overflow: hidden;
+  border: 2px solid #999;
+  border-radius: 50%;
+
+  .avatar img {
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+  }
+}
+
+.avatar-list {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .avatar-item {
+    position: relative;
+    &:nth-child(n + 2) {
+      margin-left: -20px;
+    }
+  }
+
+  .tooltip {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 20px);
+    transform: translateX(-50%);
+    width: 160px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #333;
+
+    .name,
+    .connection {
+      font-size: 16px;
+      line-height: 1.2;
+      color: #fff;
+    }
+  }
+
+  .avatar-item:hover,
+  .avatar-item:focus-within {
+    .tooltip {
+      display: flex;
+    }
+  }
+
+  .avatar-item.is-offline {
+    .avatar-link {
+      cursor: auto;
+      filter: grayscale(1);
+    }
+  }
+}
