@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>로그인 : 네이버</title>
     <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
     <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
     <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2" />
@@ -14,6 +14,7 @@
   </head>
   <body class="login-page">
     <section class="login-sec">
+      <h1 class="sr-only">로그인 페이지</h1>
       <a href="/" class="login-logo">
         <svg width="230" height="44" viewBox="0 0 230 44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <title>naver</title>
@@ -27,7 +28,7 @@
           />
         </svg>
       </a>
-      <form action="">
+      <form action="/" method="post">
         <div class="form-input">
           <label class="sr-only">아이디</label>
           <input type="email" placeholder="아이디" required aria-describedby="idWarning" />
