@@ -1,3 +1,105 @@
-@import "./reset.css";
-@import "./theme.css";
-@import "./base.css";
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+.grid-panel {
+  @media (width > 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.apple-sec {
+  container-type: inline-size;
+}
+
+.apple-card {
+  block-size: var(--size);
+  padding: var(--large-spacing);
+  background-image: image-set('../products/iphone15.jpeg' 1x, '../products/iphone15_2x.jpeg' 2x);
+  background-position: center center;
+  background-size: clamp(734px, 100%, 100%) auto;
+  background-repeat: no-repeat;
+
+  &.type-ipad-pro {
+    background-image: image-set('../products/ipad_pro.jpeg' 1x, '../products/ipad_pro_2x.jpeg' 2x);
+    color: var(--white);
+  }
+  &.type-ipad-air {
+    background-image: image-set('../products/ipad_air.jpeg' 1x, '../products/ipad_air_2x.jpeg' 2x);
+  }
+  &.type-iphone-15-pro {
+    background-image: image-set('../products/iphone15_pro.jpeg' 1x, '../products/iphone15_pro_2x.jpeg' 2x);
+    color: var(--white);
+  }
+  &.type-iphone-15 {
+    background-image: image-set('../products/iphone15.jpeg' 1x, '../products/iphone15_2x.jpeg' 2x);
+  }
+
+  @container (width > 1024px) {
+    background-size: cover;
+    &.type-ipad-pro {
+      background-image: image-set('../products/ipad_pro_wide.jpeg' 1x, '../products/ipad_pro_wide_2x.jpeg' 2x);
+    }
+    &.type-ipad-air {
+      background-image: image-set('../products/ipad_air_wide.jpeg' 1x, '../products/ipad_air_wide_2x.jpeg' 2x);
+    }
+    &.type-iphone-15-pro {
+      background-image: image-set('../products/iphone15_pro_wide.jpeg' 1x, '../products/iphone15_pro_wide_2x.jpeg' 2x);
+    }
+    &.type-iphone-15 {
+      /* background-image: image-set('../products/iphone15_wide.jpeg' 1x, '../products/iphone15_wide_2x.jpeg' 2x); */
+    }
+  }
+
+  .ttl-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--small-spacing);
+
+    .ttl {
+      font-size: var(--large-text);
+    }
+
+    .desc {
+      font-size: var(--base-text);
+      line-height: var(--line-normal);
+    }
+
+    .later {
+      font-size: var(--small-text);
+      color: var(--gray);
+    }
+  }
+
+  .btn-area {
+    display: flex;
+    gap: var(--small-spacing);
+    justify-content: center;
+    margin-block-start: var(--x-small-spacing);
+
+    .btn-blue {
+      --active-color: var(--blue-200);
+    }
+
+    .btn-black {
+      --active-color: var(--black);
+    }
+
+    .btn {
+      display: inline-flex;
+      padding: var(--x-small-spacing) var(--small-spacing);
+      border: 1px solid var(--active-color);
+      border-radius: 100px;
+      background-color: var(--active-color);
+      font-size: var(--xx-small-text);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--active-color);
+    }
+  }
+}
